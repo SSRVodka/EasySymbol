@@ -2,16 +2,6 @@
 
 #include "searchEngine.h"
 
-bool isStartsWith(const char* src, const char* prefix) {
-    if (prefix == nullptr) return true;
-    else if (src == nullptr) return false;
-    int i;
-    for (i = 0; src[i] && prefix[i]; ++i) {
-        if (src[i] != prefix[i]) return false;
-    }
-    return prefix[i] == 0;
-}
-
 /**
  * @brief Computes the longest proper prefix which is also a suffix.
  * 

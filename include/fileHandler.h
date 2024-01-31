@@ -39,8 +39,21 @@ public:
      */
     bool loadFromText(const QString& filename);
 
+    /**
+     * @brief Loads dictionary directly from a string.
+     * 
+     * @param rawString The string representing dictionary.
+     * 
+     * @see loadFromText
+     */
     void loadFromString(const QString& rawString);
 
+    /** 
+     * @brief Saves current line buffer (`lines`) to a text file.
+     * 
+     * @param filename The target file name.
+     * @return If the retrieve operation successful or not.
+     */
     bool saveAsText(const QString& filename);
 
     /**
@@ -48,12 +61,12 @@ public:
      * 
      * @param[out] key The key of the current word.
      * @param[out] value The value corresponding to `key`.
-     * @return Is the retrieve operation successful or not.
+     * @return If the retrieve operation successful or not.
      *         If the end of the `rawFile` is reached, it will return FALSE.
      */
     bool getWordPair(QString& key, QString& value);
 
-    // bool addWordPair(const QString& key, const QString& value);
+    // TODO: bool addWordPair(const QString& key, const QString& value);
 
 private:
     /** @brief Buffer line of the file. */

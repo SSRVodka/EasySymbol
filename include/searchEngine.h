@@ -14,16 +14,6 @@
 typedef QVector<QString> strList;
 typedef seqQueue<QString> strQueue;
 
-// /**
-//  * @brief Check the prefix of a string.
-//  * 
-//  * @param src The source string.
-//  * @param prefix The prefix string.
-//  * 
-//  * @return If `prefix` is a prefix of `src`.
-//  */
-// bool isStartsWith(const QString& src, const QString& prefix);
-
 /**
  * @brief Finds substring using KMP algorithm.
  * 
@@ -35,17 +25,45 @@ typedef seqQueue<QString> strQueue;
  */
 int KMPSearch(const QString &parent, const QString &substring);
 
+/** 
+ * @class SearchEngine
+ * @brief Search engine for the project.
+ * 
+ */
 
 class SearchEngine {
 public:
     SearchEngine();
     ~SearchEngine();
 
+    /** 
+     * @brief Adds an entry to the search engine.
+     * 
+     * @param word The entry.
+     * @return If the operation is successful.
+     *         If the `word` can be found in the engine, then return FALSE.
+     */
     bool add(const QString &word);
+    /** 
+     * @brief Removes an entry in the search engine.
+     * 
+     * @param word The entry.
+     * @return If the operation is successful.
+     *         If the `word` cannot be found in the engine, then return FALSE.
+     */
     bool del(const QString &word);
 
+    /**
+     * @brief Finds the entries similiar to `pattern`.
+     * 
+     * @param pattern The specific pattern string.
+     * @return An <b>ordered</b> entry list including:
+     *       - Entries start with `pattern`;
+     *       - Entries contain `pattern`.
+     */
     strQueue findRelative(const QString &pattern);
 
 private:
+    /** @brief Ordered entry list. */
     strList srcList;
 };
