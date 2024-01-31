@@ -1,0 +1,14 @@
+<RCC>
+<qresource>
+	<file alias="style.qss">resources/qss/style.qss</file>
+	<file alias="qss_imgs/object-select-symbolic.symbolic.png">resources/qss/qss_imgs/object-select-symbolic.symbolic.png</file>
+	<file alias="qss_imgs/go-up-symbolic.symbolic.png">resources/qss/qss_imgs/go-up-symbolic.symbolic.png</file>
+	<file alias="qss_imgs/go-next-symbolic.symbolic.png">resources/qss/qss_imgs/go-next-symbolic.symbolic.png</file>
+	<file alias="qss_imgs/go-previous-symbolic.symbolic.png">resources/qss/qss_imgs/go-previous-symbolic.symbolic.png</file>
+	<file alias="qss_imgs/go-down-symbolic.symbolic.png">resources/qss/qss_imgs/go-down-symbolic.symbolic.png</file>
+	<file alias="exit.png">resources/imgs/exit.png</file>
+	<file alias="help.png">resources/imgs/help.png</file>
+	<file alias="export.png">resources/imgs/export.png</file>
+	<file alias="import.png">resources/imgs/import.png</file>
+</qresource>
+</RCC>
