@@ -22,7 +22,7 @@
 
 #include <QtGui/QClipboard>
 
-#define projectName "MySymbol"
+#define projectName "EasySymbol"
 
 #define pairDelim ' '
 #define fileFilter "text file (*.txt)"
