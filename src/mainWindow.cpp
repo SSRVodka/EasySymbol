@@ -9,6 +9,8 @@ mainWindow::mainWindow(QWidget* parent)
     clipboard = QApplication::clipboard();
     fHandler = new FileHandler;
     searchEngine = new SearchEngine;
+
+    hDialog = new helpDialog(this);
     
     setupUi(this);
     initAppearance();
@@ -123,12 +125,17 @@ void mainWindow::on_hintEdit_textChanged(const QString& text) {
     updateTable();
 }
 
-void mainWindow::on_targetTable_itemDoubleClicked(QTableWidgetItem* item) {
+void mainWindow::on_targetTable_itemClicked(QTableWidgetItem* item) {
     int rowNum = item->row();
     QString target = targetTable->model()->index(rowNum, 1).data().toString();
     clipboard->setText(target);
     popup->setText(QString("Copied: %1").arg(target));
     seqGroup->start();
+}
+
+void mainWindow::on_targetTable_itemDoubleClicked(QTableWidgetItem* item) {
+    on_targetTable_itemClicked(item);
+    QTimer::singleShot(100, this, SLOT(close()));
 }
 
 void mainWindow::initAppearance() {
@@ -229,7 +236,7 @@ void mainWindow::loadSettings() {
 }
 
 void mainWindow::help() {
-    
+    hDialog->exec();
 }
 
 void mainWindow::aboutAuthor() {

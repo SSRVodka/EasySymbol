@@ -16,12 +16,14 @@ aux_source_directory(src MAIN_SRC)
 set(
   MOC_H
     include/mainWindow.h
+    include/helpDialog.h
 )
 
 set(
   FORM_SRC
     ui/mainWindow.ui
     ui/popup.ui
+    ui/helpDialog.ui
 )
 
 set(

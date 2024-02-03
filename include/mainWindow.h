@@ -6,6 +6,8 @@
 #include "logger.h"
 #include "popup.h"
 
+#include "helpDialog.h"
+
 #include "ui_mainWindow.h"
 
 class mainWindow : public QMainWindow, public Ui::mainWindow {
@@ -31,6 +33,7 @@ private:
 
     QClipboard* clipboard;
 
+    helpDialog* hDialog;
     Popup* popup;
     FileHandler* fHandler;
     SearchEngine* searchEngine;
@@ -43,6 +46,7 @@ private:
 private slots:
 
     void on_hintEdit_textChanged(const QString& text);
+    void on_targetTable_itemClicked(QTableWidgetItem* item);
     void on_targetTable_itemDoubleClicked(QTableWidgetItem* item);
 
     /* Common Actions */

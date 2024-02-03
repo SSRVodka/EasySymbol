@@ -6,6 +6,8 @@
 	<file alias="qss_imgs/go-next-symbolic.symbolic.png">resources/qss/qss_imgs/go-next-symbolic.symbolic.png</file>
 	<file alias="qss_imgs/go-previous-symbolic.symbolic.png">resources/qss/qss_imgs/go-previous-symbolic.symbolic.png</file>
 	<file alias="qss_imgs/go-down-symbolic.symbolic.png">resources/qss/qss_imgs/go-down-symbolic.symbolic.png</file>
+	<file alias="docs/README.html">resources/docs/README.html</file>
+	<file alias="docs/README.md">resources/docs/README.md</file>
 	<file alias="exit.png">resources/imgs/exit.png</file>
 	<file alias="help.png">resources/imgs/help.png</file>
 	<file alias="export.png">resources/imgs/export.png</file>
